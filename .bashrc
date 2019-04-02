@@ -129,9 +129,16 @@ pict() {
   _model="$1"
 	shift
 	_options="$*"
-	/usr/local/bin/pict <(cat "$_model" | nkf --jis) $_options | nkf -w
+	/usr/local/bin/pict <(cat "$_model" | nkf -s) $_options | nkf -w
 }
 
 # fzf setting	
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+col() {
+  awk -v col=$1 '{print $col}'
+}
+
+csvCol() {
+	awk -F ',' -v col=$1 '{pring $col}'
+}

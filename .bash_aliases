@@ -14,4 +14,8 @@ alias dimg="docker images"
 # clippebord
 alias clip=/mnt/c/Windows/System32/clip.exe
  
+# ls setting
+alias lla='ls -Al'
 
+alias bashrc='. ~/.bashrc'
+alias bd='cd ..'
