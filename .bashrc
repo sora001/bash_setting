@@ -116,29 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#################### Customize #########################
 
-# custome command
-wcd() {
-  _dir="$1"
-  cd $(wslpath ${_dir})
-}
-
-# pict setting
-pict() {
-  _model="$1"
-	shift
-	_options="$*"
-	/usr/local/bin/pict <(cat "$_model" | nkf -s) $_options | nkf -w
-}
-
-# fzf setting	
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-col() {
-  awk -v col=$1 '{print $col}'
-}
-
-csvCol() {
-	awk -F ',' -v col=$1 '{pring $col}'
-}
