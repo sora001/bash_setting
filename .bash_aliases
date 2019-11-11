@@ -21,6 +21,9 @@ alias lla='ls -Al'
 alias bashrc='. ~/.bashrc'
 alias ..='cd ..'
 alias exp='explorer.exe'
+alias jcurl="curl -H 'Conntent-Type:application/json'"
+alias glog="git log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%c' --all --graph"
+alias alternative='update-alternatives'
 
 ##### custome command ####
 wcd() {
